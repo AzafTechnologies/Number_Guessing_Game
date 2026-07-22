@@ -9,7 +9,7 @@ while True:
     try:
         with open("high_score.txt", "r") as f:
             high_score = int(f.read().strip())
-        print(f"\n🏆 Best Record: {high_score} guesses")
+        print("\n🏆 Best Record: ",high_score," guesses")
     except Exception:
         high_score = 9999  # No score saved yet
         print("\n🏆 No high score recorded yet. Be the first!")
@@ -32,7 +32,7 @@ while True:
         elif guess > secret_number:
             print("📈 Too high! Type a smaller number.\n")
         else:
-            print(f"\n🎉 Correct! You won in {attempts} attempts!")
+            print("\n🎉 Correct! You won in ",attempts," attempts!")
             
             # 3. Save high score safely
             if attempts < high_score:
